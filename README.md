@@ -3,7 +3,8 @@ Small script to extract laboratory data from Swisslab and send it to the Empower
 
 This script extracts laboratory measurements directly from the database of the Laboratory Information System [Swisslab](https://www.roche.de/diagnostics/systeme/it-loesungen/swisslab-laborinformationsystem.html#SWISSLAB-Laboratory-Information-System). It then calculates daily medians and transmits them to the Empower project via email for quality control purposes. This script currently only covers the "percentiler" and not the "flagger" part. 
 
-Please contact Linda Thienpont if you want to participate in the Empower project. 
+Please contact Linda Thienpont (linda.thienpont\<at\>ugent.be) of Thienpont & Stöckl Wissenschaftliches Consulting GbR
+if you want to participate in the Empower project.
 
 There are serveral publications from the Empower project that provide more in-depth information: 
 
