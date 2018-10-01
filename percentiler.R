@@ -59,7 +59,13 @@ dateBis <- strftime(anaDate, "%d.%m.%Y 00:00:00:000")
 dateVon <- strftime(anaDate -7, "%d.%m.%Y 00:00:00:000")
 
 geraete <- RJDBC::dbGetQuery(conn, "select * from GERAET") 
-analyte <- RJDBC::dbGetQuery(conn, "select * from ANALYT")
+analyte <- RJDBC::dbGetQuery(conn, paste0("select A.ANALYTX, U.UNIT ",
+                                          "from ANALYT A ",
+                                          "join UNITANALYTREF UA ",
+                                          "on UA.ANALYTX = A.ANALYTX ",
+                                          "join UNIT U ",
+                                          "on U.UNITX = UA.UNITX ",
+                                          "where UA.STORNODAT is null"))
 
 
 output <- purrr::map_dfr(analytes, function(a){
@@ -96,7 +102,7 @@ output <- purrr::map_dfr(analytes, function(a){
     
     o <- o %>%
       group_by(CODE1, GERAETENR, datum) %>%
-      summarise(med = median(ERGEBNISF1), n = n(), EINHEIT = EINHEIT[1]) %>%
+      summarise(med = median(ERGEBNISF1), n = n(), EINHEIT = UNIT[1]) %>%
       ungroup()
     
     o
