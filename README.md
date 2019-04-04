@@ -1,10 +1,11 @@
 # SwlToEmpower
-Small script to extract laboratory data from Swisslab and send it to the Empower quality control project. Written in R.
+Small script to extract laboratory data from Nexus (previously Swisslab) and send it to the Percentiler program. Written in R.
 
-This script extracts laboratory measurements directly from the database of the Laboratory Information System [Swisslab](https://www.roche.de/diagnostics/systeme/it-loesungen/swisslab-laborinformationsystem.html#SWISSLAB-Laboratory-Information-System). It then calculates daily medians and transmits them to the Empower project via email for quality control purposes. This script currently only covers the "percentiler" and not the "flagger" part. 
+This script extracts laboratory measurements directly from the database of the Laboratory Information System Nexus, calculates daily medians and transmits them to the Percentiler program via email for quality control purposes. Currently, the script does not cover the Flagger program.
 
-Please contact Linda Thienpont (linda.thienpont\<at\>ugent.be) of Thienpont & Stöckl Wissenschaftliches Consulting GbR
-if you want to participate in the Empower project.
+The Percentiler and Flagger programs are hosted by the Norwegian Organization for Quality Improvement of Laboratory Examinations (Noklus) and are tools for quality assurance in medical laboratories (http://www.noklus.no/en/Hospital-andprivatelaboratories/Percentiler-andFlaggerprograms.aspx).
+
+Please contact Anne Elisabeth Solsvik (anne.elisabeth.solsvik\<at\>noklus.no) for information about participation or other queries. 
 
 There are serveral publications from the Empower project that provide more in-depth information: 
 
